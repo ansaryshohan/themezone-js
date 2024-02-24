@@ -6,68 +6,66 @@
     <title>Document</title>
   </head>
   <body>
+
+
+    
     <script>
-      //=== Printing=======
-      document.write("Hello from JavaScript");
-      document.write("<br/>");
-      document.write("Yeah thanks a lot Themezone Academy");
-      document.write("<br/>");
+      //====== Javascript statements======
+      // Programming instruction are called statements. JS statements are composed of Values, Operators,Expressions,Keywords,Comments. example:
+      // document.getElementById("demo").innerText = "Hello Home work-2";
 
-      // === printing variables===
-      var name = "Ansary Shohan";
-      var loc = "mirpur";
-      var state = "student";
+      // ====Javascript Function=====
+      // Function declaration
+      function firstFunction(name) {
+        document.write(name);
+      }
 
-      document.write(name);
-      document.write(loc);
-      document.write(state);
-      document.write("<br/>");
+      // Function call
+      firstFunction("ansary");
 
-      // === concat=====
-     document.write("My name is "+ name +". " +"I live in " + loc +". My current designation is " + state+ ". <br/>");
+      //===== if,else if,else statements=====
+      var color = "yellow";
+      if (color === "yellow") {
+        document.write("color is yellow");
+      } else if (color === "blue") {
+        document.write("color is blue");
+      } else {
+        document.write("color doesn't match yellow  and blue");
+      }
 
-      //== expression===
-      // Expression is a combination of Values,Variables and Operators which computes to a single value
-      var expression= 5* 10;
-      
-      // ===Arithmetic Operators===
-      var a= 10;
-      var b= 2;
+      // ===== switch case statements=====
+      function getday() {
+        var date = new Date();
+        var dayName;
 
-      var addition = a+b;      //addition operator.
-      var subtraction = a-b;   //subtraction operator.
-      var multiplication = a*b; //multiplication operator.
-      var division = a/b;     //division operator.
-      var modulus = a%b;    //modulus operator.
-      var exponentiation = a**b; //exponentiation/power of operator.
-      a++;   //increase
-      b--;   //decrease
+        switch (date.getDay()) {
+          case 0:
+            dayName = "Saturday";
+            break;
+          case 1:
+            dayName = "Sunday";
+            break;
+          case 2:
+            dayName = "Monday";
+            break;
+          case 3:
+            dayName = "Tuesday";
+            break;
+          case 4:
+            dayName = "Wednesday";
+            break;
+          case 5:
+            dayName = "Thursday";
+            break;
+          case 6:
+            dayName = "Friday";
+            break;
+        }
 
-      // ===Comparison operators====
-      document.write(a>b);  //greater than operator
-      document.write("<br/>");
-      document.write(a<b);   //less than operator
-      document.write("<br/>");
-      document.write(a==b);  //Equal to operator
-      document.write("<br/>");
-      document.write(a!=b); //not equal to operator
-      document.write("<br/>");
-      document.write(a!=b); //not equal to operator
-      document.write("<br/>");
-      document.write(a===b); //equal to with type compare operator
-      document.write("<br/>");
-      document.write(a>=b); //greater than and equal to operator
-      document.write("<br/>");
-      document.write(a<=b); //less than and equal to operator
-      document.write("<br/>");
+        return dayName;
+      }
 
-      // ==== Logical Operators====
-      document.write(a>5 && b<5); // logical and operator
-      document.write("<br/>");
-      document.write(a>5  || b<5);// logical or operator
-      document.write("<br/>");
-      document.write(!a) // not operator
-
-      </script>
+      document.write(getday());
+    </script>
   </body>
 </html>
