@@ -6,6 +6,14 @@
     <title>Document</title>
   </head>
   <body>
+
+    <main>
+      <h1>This is the Home Page</h1>
+
+      <button onclick="handleClick(4)">Click me</button>
+
+    </main>
+
     <script>
       // ==== document.write() vs console.log()=====
       /**
@@ -23,12 +31,18 @@
       var number = 5; // no error is given
 
       let letNum= 1;
-      letNum= 7;    // no error is given
-      let letNum =5; //error is given
+      letNum= 7;     // can assign a value
+      let letNum =5;  //error is given
 
       const constNum = 1;
-      constNum = 8; //error is given
-      const constNum=5; //error is given;
+      constNum = 8;    //can't assign value
+      const constNum=5;  //error is given;
+
+       function handleClick(first,second=1,third=2){
+        document.write("Hello from Button Click : ",Number(first)+Number(second)+Number(third))
+       }
+
+
     </script>
   </body>
 </html>
