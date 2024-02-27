@@ -27,19 +27,19 @@
        * let can be re-assigned but can not be re-declared.
        * const can not be re-declared or re-assigned.
        * **/
-      var number = 1;
-      var number = 5; // no error is given
+      // var number = 1;
+      // var number = 5; // no error is given
 
-      let letNum= 1;
-      letNum= 7;     // can assign a value
-      let letNum =5;  //error is given
+      // let letNum= 1;
+      // letNum= 7;     // can assign a value
+      // let letNum =5;  //error is given
 
-      const constNum = 1;
-      constNum = 8;    //can't assign value
-      const constNum=5;  //error is given;
+      // const constNum = 1;
+      // constNum = 8;    //can't assign value
+      // const constNum=5;  //error is given;
 
        function handleClick(first,second=1,third=2){
-        document.write("Hello from Button Click : ",Number(first)+Number(second)+Number(third))
+        document.write("value of Button Click : ",Number(first)+Number(second)+Number(third))
        }
 
 
