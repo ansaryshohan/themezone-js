@@ -6,66 +6,29 @@
     <title>Document</title>
   </head>
   <body>
-
-
-    
     <script>
-      //====== Javascript statements======
-      // Programming instruction are called statements. JS statements are composed of Values, Operators,Expressions,Keywords,Comments. example:
-      // document.getElementById("demo").innerText = "Hello Home work-2";
+      // ==== document.write() vs console.log()=====
+      /**
+       * document.write() is used to show any data or value in the interface of browser.user can directly see in the interface if we user it
+       * console.log() is used to see any data on the console of the dev tool. this is for the developer help
+       */
 
-      // ====Javascript Function=====
-      // Function declaration
-      function firstFunction(name) {
-        document.write(name);
-      }
+      // ==== var,let,const===
+      /**
+       * var can be re-declared, re-assigned  in javascript
+       * let can be re-assigned but can not be re-declared.
+       * const can not be re-declared or re-assigned.
+       * **/
+      var number = 1;
+      var number = 5; // no error is given
 
-      // Function call
-      firstFunction("ansary");
+      let letNum= 1;
+      letNum= 7;    // no error is given
+      let letNum =5; //error is given
 
-      //===== if,else if,else statements=====
-      var color = "yellow";
-      if (color === "yellow") {
-        document.write("color is yellow");
-      } else if (color === "blue") {
-        document.write("color is blue");
-      } else {
-        document.write("color doesn't match yellow  and blue");
-      }
-
-      // ===== switch case statements=====
-      function getday() {
-        var date = new Date();
-        var dayName;
-
-        switch (date.getDay()) {
-          case 0:
-            dayName = "Saturday";
-            break;
-          case 1:
-            dayName = "Sunday";
-            break;
-          case 2:
-            dayName = "Monday";
-            break;
-          case 3:
-            dayName = "Tuesday";
-            break;
-          case 4:
-            dayName = "Wednesday";
-            break;
-          case 5:
-            dayName = "Thursday";
-            break;
-          case 6:
-            dayName = "Friday";
-            break;
-        }
-
-        return dayName;
-      }
-
-      document.write(getday());
+      const constNum = 1;
+      constNum = 8; //error is given
+      const constNum=5; //error is given;
     </script>
   </body>
 </html>
