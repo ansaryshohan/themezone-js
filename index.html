@@ -6,43 +6,19 @@
     <title>Document</title>
   </head>
   <body>
-
     <main>
       <h1>This is the Home Page</h1>
-
-      <button onclick="handleClick(4)">Click me</button>
-
+      <select id="list"></select>
     </main>
 
     <script>
-      // ==== document.write() vs console.log()=====
-      /**
-       * document.write() is used to show any data or value in the interface of browser.user can directly see in the interface if we user it
-       * console.log() is used to see any data on the console of the dev tool. this is for the developer help
-       */
-
-      // ==== var,let,const===
-      /**
-       * var can be re-declared, re-assigned  in javascript
-       * let can be re-assigned but can not be re-declared.
-       * const can not be re-declared or re-assigned.
-       * **/
-      // var number = 1;
-      // var number = 5; // no error is given
-
-      // let letNum= 1;
-      // letNum= 7;     // can assign a value
-      // let letNum =5;  //error is given
-
-      // const constNum = 1;
-      // constNum = 8;    //can't assign value
-      // const constNum=5;  //error is given;
-
-       function handleClick(first,second=1,third=2){
-        document.write("value of Button Click : ",Number(first)+Number(second)+Number(third))
-       }
-
-
+      const select = document.getElementById("list");
+      let year = 2024;
+      for (year; year >= 2000; year--) {
+        const option = document.createElement("option");
+        option.innerText = year;
+        select.appendChild(option);
+      }
     </script>
   </body>
 </html>
